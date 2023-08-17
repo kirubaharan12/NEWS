@@ -1,0 +1,22 @@
+<!-- templates/news_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Template</title>
+</head>
+<body>
+    <h1>News</h1>
+    <ul>
+        {% for news in news_list %}
+            <li>
+                <h2>({{ news.index }}) {{ news.title }}</h2>
+                <p><strong>Summary:</strong> {{ news.summary }}</p>
+                <p><strong>Source:</strong> {{ news.source }}</p>
+                <p><strong>Published Date:</strong> {{ news.published_date }}</p>
+                
+                <a href="{{ news.link }}" target="_blank">Read More</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
